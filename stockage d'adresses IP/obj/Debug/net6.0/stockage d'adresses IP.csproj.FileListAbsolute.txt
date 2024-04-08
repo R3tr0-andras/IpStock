@@ -1,0 +1,14 @@
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\bin\Debug\net6.0\stockage d'adresses IP.exe
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\bin\Debug\net6.0\stockage d'adresses IP.deps.json
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\bin\Debug\net6.0\stockage d'adresses IP.runtimeconfig.json
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\bin\Debug\net6.0\stockage d'adresses IP.dll
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\bin\Debug\net6.0\stockage d'adresses IP.pdb
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\obj\Debug\net6.0\stockage d'adresses IP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\obj\Debug\net6.0\stockage d'adresses IP.AssemblyInfoInputs.cache
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\obj\Debug\net6.0\stockage d'adresses IP.AssemblyInfo.cs
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\obj\Debug\net6.0\stockage d'adresses IP.csproj.CoreCompileInputs.cache
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\obj\Debug\net6.0\stockage d'adresses IP.dll
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\obj\Debug\net6.0\refint\stockage d'adresses IP.dll
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\obj\Debug\net6.0\stockage d'adresses IP.pdb
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\obj\Debug\net6.0\stockage d'adresses IP.genruntimeconfig.cache
+C:\Users\Andra\OneDrive\Bureau\visual\stockage d'adresses IP\obj\Debug\net6.0\ref\stockage d'adresses IP.dll

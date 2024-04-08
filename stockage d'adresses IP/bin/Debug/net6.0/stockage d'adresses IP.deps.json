@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "stockage d'adresses IP/1.0.0": {
+        "runtime": {
+          "stockage d'adresses IP.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "stockage d'adresses IP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
