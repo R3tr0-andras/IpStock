@@ -8,27 +8,18 @@ namespace stockage_d_adresses_IP
 {
     public struct GestionAdressesIP
     {
-        private const int MAX_ADRESSES = 20;
-        private const int MAX_NOMS = 20;
-        private static int[,] adressesIP = new int[MAX_ADRESSES, 4];
-        private static string[] noms = new string[MAX_NOMS];
-        private static int nbAdresses = 0;
-        private static int nbNoms = 0;
+        InfosIp[] listingIP;
+        int compteur;
 
-        public static bool LireOctet(out int octet)
+        public GestionAdressesIP()
         {
-            octet = 0;
-            Console.Write("Entrez un nombre entre 0 et 255 : ");
-            if (int.TryParse(Console.ReadLine(), out octet) && octet >= 0 && octet <= 255)
-            {
-                return true;
-            }
-            return false;
+            listingIP = new InfosIp[20];
+            compteur = 0;
         }
 
-        public static void LireAdresseIP()
+        public void AjouteAdresseIP()
         {
-            if (nbAdresses < MAX_ADRESSES)
+            if (compteur < 20)
             {
                 int[] adresse = new int[4];
                 for (int i = 0; i < 4; i++)
@@ -40,11 +31,11 @@ namespace stockage_d_adresses_IP
                     } while (!LireOctet(out octet));
                     adresse[i] = octet;
                 }
-                for (int i = 0; i < 4; i++)
-                {
-                    adressesIP[nbAdresses, i] = adresse[i];
-                }
-                nbAdresses++;
+                Console.WriteLine("Entrez le nom associé à l'adresse IP :");
+                string? nom = Console.ReadLine();
+                listingIP[compteur].adress = adresse;
+                listingIP[compteur].nom = nom;
+                compteur++;
             }
             else
             {
@@ -52,55 +43,55 @@ namespace stockage_d_adresses_IP
             }
         }
 
-        public static bool AjouteAdresseIP()
+        public bool LireOctet(out int octet)
         {
-            if (nbAdresses < MAX_ADRESSES)
+            octet = 0;
+            Console.Write("Entrez un nombre entre 0 et 255 : ");
+            if (int.TryParse(Console.ReadLine(), out octet) && octet >= 0 && octet <= 255)
             {
-                LireAdresseIP();
                 return true;
             }
             return false;
         }
 
-        public static bool AjouteNom(string nom)
-        {
-            if (nbNoms < MAX_NOMS)
-            {
-                noms[nbNoms] = nom;
-                nbNoms++;
-                return true;
-            }
-            return false;
-        }
-
-        public static string ConcateneAdresse(int ligne)
-        {
-            string adresseConcatenee = "";
-
-            for (int i = 0; i < 4; i++)
-            {
-                adresseConcatenee += adressesIP[ligne, i];
-
-                if (i < 3)
-                {
-                    adresseConcatenee += ".";
-                }
-            }
-
-            return adresseConcatenee;
-        }
-
-        public static string ConcateneTout()
+        public string ConcateneTout()
         {
             string result = "";
 
-            for (int i = 0; i < nbNoms; i++)
+            for (int i = 0; i < compteur; i++)
             {
-                string adresse = ConcateneAdresse(i);
-                result += $"{noms[i]} : {adresse}\n";
+                string adresse = ConcateneAdresse(listingIP[i].adress);
+                result += $"{listingIP[i].nom} : {adresse}\n";
             }
 
             return result;
         }
+
+        public string ConcateneAdresse(int[] adresse)
+        {
+            return LireOctets(adresse);
+        }
+
+        public string LireOctets(int[] octets)
+        {
+            string octetsConcatenes = "";
+
+            for (int i = 0; i < octets.Length; i++)
+            {
+                octetsConcatenes += octets[i];
+
+                if (i < octets.Length - 1)
+                {
+                    octetsConcatenes += ".";
+                }
+            }
+
+            return octetsConcatenes;
+        }
+    }
+    public struct InfosIp
+    {
+        public int[] adress;
+        public string nom;
     }
 }

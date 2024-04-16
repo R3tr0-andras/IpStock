@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andra\\OneDrive\\Bureau\\visual\\stockage d'adresses IP\\stockage d'adresses IP.csproj",
+      "projectUniqueName": "C:\\Users\\Andra\\Desktop\\visual\\stockage d'adresses IP\\stockage d'adresses IP.csproj",
       "projectName": "stockage d'adresses IP",
-      "projectPath": "C:\\Users\\Andra\\OneDrive\\Bureau\\visual\\stockage d'adresses IP\\stockage d'adresses IP.csproj",
+      "projectPath": "C:\\Users\\Andra\\Desktop\\visual\\stockage d'adresses IP\\stockage d'adresses IP.csproj",
       "packagesPath": "C:\\Users\\Andra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andra\\OneDrive\\Bureau\\visual\\stockage d'adresses IP\\obj\\",
+      "outputPath": "C:\\Users\\Andra\\Desktop\\visual\\stockage d'adresses IP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
