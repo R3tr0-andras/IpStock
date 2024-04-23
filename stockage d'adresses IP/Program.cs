@@ -11,15 +11,16 @@
             while (continuer)
             {
                 AfficherMenu();
-                // je ne sais pas à quoi sert le "?" derrière le type mais ça règle mes problèmes, penser à demander à madame Baudson
                 string? choix = Console.ReadLine();
 
                 switch (choix)
                 {
                     case "1":
+                        Console.Clear();
                         gestionAdressesIP.AjouteAdresseIP();
                         break;
                     case "2":
+                        Console.Clear();
                         Console.WriteLine(gestionAdressesIP.ConcateneTout());
                         break;
                     case "stop":

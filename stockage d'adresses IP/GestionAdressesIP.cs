@@ -17,30 +17,38 @@ namespace stockage_d_adresses_IP
             compteur = 0;
         }
 
-        public void AjouteAdresseIP()
+        public bool AjouteAdresseIP()
         {
             if (compteur < 20)
             {
-                int[] adresse = new int[4];
-                for (int i = 0; i < 4; i++)
-                {
-                    int octet;
-                    do
-                    {
-                        Console.WriteLine($"Entrez l'octet {i + 1} de l'adresse IP :");
-                    } while (!LireOctet(out octet));
-                    adresse[i] = octet;
-                }
-                Console.WriteLine("Entrez le nom associé à l'adresse IP :");
-                string? nom = Console.ReadLine();
-                listingIP[compteur].adress = adresse;
-                listingIP[compteur].nom = nom;
-                compteur++;
+                LireAdresseIP();
+                return true;
             }
             else
             {
+                return false;
                 Console.WriteLine("La matrice est pleine, impossible d'ajouter une nouvelle adresse.");
             }
+        }
+
+        public void LireAdresseIP()
+        {
+            int[] adresse = new int[4];
+            for (int i = 0; i < 4; i++)
+            {
+                int octet;
+                do
+                {
+                    Console.WriteLine($"Entrez l'octet {i + 1} de l'adresse IP :");
+                } while (!LireOctet(out octet));
+                adresse[i] = octet;
+            }
+
+            Console.WriteLine("Entrez le nom associé à l'adresse IP :");
+            string? nom = Console.ReadLine();
+            listingIP[compteur].adress = adresse;
+            listingIP[compteur].nom = nom;
+            compteur++;
         }
 
         public bool LireOctet(out int octet)
@@ -63,7 +71,6 @@ namespace stockage_d_adresses_IP
                 string adresse = ConcateneAdresse(listingIP[i].adress);
                 result += $"{listingIP[i].nom} : {adresse}\n";
             }
-
             return result;
         }
 
